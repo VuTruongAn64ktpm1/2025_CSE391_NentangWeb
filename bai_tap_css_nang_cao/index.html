@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giao diện CRUD Sinh viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Quản lý sinh viên</h1>
+  </nav>
+
+  <div class="container">
+    <form class="form">
+      <h2>Form thêm sinh viên</h2>
+      <p><label for="stdId">Mã sinh viên</label><input type="text" id="stdId" required></p>
+      <p><label for="fname">Họ và tên</label><input type="text" id="fname" required></p>
+      <p><label for="email">Email</label><br><input type="text" id="email" placeholder="@gmail.com" required></p>
+      <p><label for="BirthDate">Sinh nhật</label><input type="text" id="BirthDate" required></p>
+      <p>
+        <label>Giới tính:</label>
+        <input type="radio" id="male" name="gender" value="male"><label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="female"><label for="female">Nữ</label>
+      </p>
+      <p><label for="note">Ghi chú</label><br><textarea id="note"></textarea></p>
+      <p><input type="submit" value="Thêm sinh viên" class="submit-btn"></p>
+    </form>
+
+    <div class="table-container">
+      <h2>Danh sách sinh viên</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>STT</th><th>Mã SV</th><th>Họ tên</th><th>Email</th><th>Giới tính</th><th>Ngày sinh</th><th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td><td>225</td><td>Vũ Trường An</td><td>Vutruongan@gmail.com</td><td>Nam</td><td>11/11/2004</td>
+            <td><a href="#">Sửa</a> <a href="#">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>02</td><td>325</td><td>Trường An Vũ</td><td>Truonganvu@gmail.com</td><td>Nam</td><td>12/11/2009</td>
+            <td><a href="#">Sửa</a> <a href="#">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>03</td><td>472</td><td>An Trường Vũ</td><td>Antruongvu@gmail.com</td><td>Nam</td><td>30/02/2029</td>
+            <td><a href="#">Sửa</a> <a href="#">Xóa</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
