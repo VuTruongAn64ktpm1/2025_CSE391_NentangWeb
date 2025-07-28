@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Nhân viên - TLU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">TLU</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#" class="active">Employees</a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search" id="searchInput">
+            <button onclick="searchEmployees()">Search</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <div class="page-title">Manage Employees</div>
+            <div class="buttons">
+                <button class="btn btn-danger">🗑️ Delete</button>
+                <button class="btn btn-success" onclick="showAddForm()">✅ Add New Employee</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox"></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Dữ liệu sẽ được load từ JavaScript -->
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <div class="pagination-info">
+                    Showing <span id="currentCount">5</span> out of <span id="totalCount">25</span> entries
+                </div>
+                <div class="pagination-controls">
+                    <a href="#" class="page-btn">Previous</a>
+                    <a href="#" class="page-btn">1</a>
+                    <a href="#" class="page-btn active">2</a>
+                    <a href="#" class="page-btn">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Form -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Employee</h3>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="employeeForm">
+                <div class="form-group">
+                    <label for="employeeName">Name *</label>
+                    <input type="text" id="employeeName" name="name" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeEmail">Email *</label>
+                    <input type="email" id="employeeEmail" name="email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeAddress">Address *</label>
+                    <input type="text" id="employeeAddress" name="address" required>
+                    <div class="error-message" id="addressError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="employeePhone">Phone *</label>
+                    <input type="text" id="employeePhone" name="phone" required placeholder="0xxxxxxxxx">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-success">Add Employee</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Import JavaScript files -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
