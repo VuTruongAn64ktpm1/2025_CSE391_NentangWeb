@@ -1,0 +1,74 @@
+* { padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; padding: 10px; }
+
+#navbar {
+  background-color: #4c90af;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.form-container, .table-container {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.06);
+}
+
+.form-container p { margin-bottom: 10px; }
+
+input[type="text"], textarea {
+
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+input[type="submit"]{
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+#studentTable { 
+  width: 80%; 
+  border-collapse: collapse; 
+  margin: 0 auto; 
+}
+#studentTable th, #studentTable td { 
+  padding: 8px; 
+  text-align: center; 
+  border: 1px solid #eee; 
+}
+#studentTable tbody tr:hover { 
+  background-color: #f9f9f9; 
+}
+
+@media (max-width: 768px) {
+  #container { flex-direction: column; }
+}
+
+#studentForm{
+  margin: 0 auto;
+}
